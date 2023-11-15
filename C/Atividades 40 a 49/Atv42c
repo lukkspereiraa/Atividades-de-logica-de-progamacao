@@ -1,0 +1,31 @@
+
+
+#include <stdio.h>
+
+int main()
+{
+    int codigo, dataDeNacimento, dataDeEntradaNaEmpresa, idade, idadeDeServico, anaoAtual;
+    
+    printf("escreva o codigo e logo em sequida o ano de nacimento e a data(ano) de entrada na empresa\n");
+    scanf("%i", &codigo);
+    scanf("%i", &dataDeNacimento);
+    scanf("%i", &dataDeEntradaNaEmpresa);
+    
+    printf("Digite o ano atual \n");
+    scanf("%i", &anaoAtual);
+    
+    idade = anaoAtual - dataDeNacimento;
+    idadeDeServico = anaoAtual - dataDeEntradaNaEmpresa;
+    
+    if(idade >= 65){
+        printf(" sua idade:%i, seu tempo de servico:%i. Requerer aposentadoria", idade, idadeDeServico);
+    }else if(idadeDeServico >= 30){
+          printf(" sua idade:%i, seu tempo de servico:%i. Requerer aposentadoria", idade, idadeDeServico);
+    }else if(idade >= 60 && idadeDeServico >= 25){
+          printf(" sua idade:%i, seu tempo de servico:%i. Requerer aposentadoria", idade, idadeDeServico);
+    }else{
+          printf(" sua idade:%i, seu tempo de servico:%i. nao requerer aposentadoria", idade, idadeDeServico);
+    }
+    
+    return 0;
+}
